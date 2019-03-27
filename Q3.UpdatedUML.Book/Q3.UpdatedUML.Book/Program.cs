@@ -12,24 +12,20 @@ namespace Q3.UpdatedUML.Book
         {
             Book newbook = new Book();
 
-          
+            Console.WriteLine("*** ENTER NEW BOOK DETAILS BELOW ***\n");
 
-                Console.WriteLine("*** ENTER NEW BOOK DETAILS BELOW ***\n");
+            Console.Write("Enter Book Title: ");
+            string BookTitle = Console.ReadLine();
+            Console.Write("Enter Book Author: ");
+            string BookAuthor = Console.ReadLine();
+            Console.Write("Enter Book Publisher: ");
+            string BookPublisher = Console.ReadLine();
 
-                Console.Write("Enter Book Title: ");
-                string BookTitle = Console.ReadLine();
-                Console.Write("Enter Book Author: ");
-                string BookAuthor = Console.ReadLine();
-                Console.Write("Enter Book Publisher: ");
-                string BookPublisher = Console.ReadLine();
+            Book b1 = new Book(BookTitle, BookAuthor, BookPublisher);
+            newbook = b1;
 
-
-                Book b1 = new Book(BookTitle, BookAuthor, BookPublisher);
-                newbook = b1;
-
-            
-                Console.WriteLine("\n******************************************");
-                Console.WriteLine(newbook.GetBookDetail());
+            Console.WriteLine("\n******************************************");
+            Console.WriteLine(newbook.GetBookDetail());
             
             Console.ReadLine();
         }
