@@ -10,23 +10,17 @@ namespace Q3.UpdatedUML.Book
     {
         static void Main(string[] args)
         {
-            Book newbook = new Book();
-
             Console.WriteLine("*** ENTER NEW BOOK DETAILS BELOW ***\n");
-
+            Book newbook = new Book();
             Console.Write("Enter Book Title: ");
-            string BookTitle = Console.ReadLine();
+            newbook.Title = Console.ReadLine();
             Console.Write("Enter Book Author: ");
-            string BookAuthor = Console.ReadLine();
+            newbook.Author = Console.ReadLine();
             Console.Write("Enter Book Publisher: ");
-            string BookPublisher = Console.ReadLine();
-
-            Book b1 = new Book(BookTitle, BookAuthor, BookPublisher);
-            newbook = b1;
+            newbook.Publisher = Console.ReadLine();
 
             Console.WriteLine("\n******************************************");
-            Console.WriteLine(newbook.GetBookDetail());
-            
+            Console.WriteLine($"The following new book has been processed:\nBook Title: {newbook.Title}\nAuthor: {newbook.Author}\nPublisher: {newbook.Publisher}");  
             Console.ReadLine();
         }
     }
@@ -40,16 +34,14 @@ namespace Q3.UpdatedUML.Book
         {
 
         }
-        public Book( string _title, string _author, string _publisher)
+        /*
+        public Book( string title, string author, string publisher)
         {
-            Title = _title;
-            Author = _author;
-            Publisher = _publisher;
+            Title = title;
+            Author = author;
+            Publisher = publisher;
         }
-        public string GetBookDetail()
-        {
-            return $"The following new book has been processed:\nBook Title: {Title}\nAuthor: {Author}\nPublisher: {Publisher}";
-        }
+        */
     }
 
 }
