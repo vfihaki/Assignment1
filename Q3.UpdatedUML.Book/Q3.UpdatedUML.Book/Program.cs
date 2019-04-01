@@ -33,15 +33,13 @@ namespace Q3.UpdatedUML.Book
         public Book()
         {
 
-        }
-        /*
+        }        
         public Book( string title, string author, string publisher)
         {
             Title = title;
             Author = author;
             Publisher = publisher;
-        }
-        */
+        }        
     }
 
 }
